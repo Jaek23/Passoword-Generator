@@ -20,7 +20,7 @@ function generatePassword(){
   var specialArray = ["!","@","#","$","%","^","&","*","("]
 //this selectedChar variable will hold alll the arrays that will be added determined by the user confirm boolean//
   var selectedChar = []
-//
+//this is the variable that will hold the final password that will be generated//
   var password = "";
 
 //length variable to determine how long the password should be determined by what the user answers on the prompt//
@@ -51,10 +51,7 @@ function generatePassword(){
   for(var i=0; i < length ; i++){
 //the variable randomChar will hold the random indexes pulled from the selectedChar array through the random math function//
      var randomChar = Math.floor(Math.random() * selectedChar.length);
-//
      password += selectedChar[randomChar]  
-     console.log(randomChar);
   }   
-
   return password;
 }
